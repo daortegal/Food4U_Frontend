@@ -1,0 +1,75 @@
+<div class="col-lg-6 offset-sm-3">
+    <form (ngSubmit)="edit?updateRestaurant():createRestaurant()" #form="ngForm" class="form-horizontal">
+        <fieldset>            
+        <!-- Form Name -->
+        <legend>{{edit?"Update Restaurant":"Create Restaurant"}}</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="name">Restaurant name</label>  
+            <div class="col-md-12">
+            <input id="name" name="name" type="text" [(ngModel)]="restaurant.name"
+            placeholder="Restaurant Name" class="form-control input-md" required="">
+            
+            </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="address">Restaurant addres</label>  
+            <div class="col-md-12">
+            <input id="address" name="address" type="text" [(ngModel)]="restaurant.address"
+            placeholder="Restaurant address" class="form-control input-md" required="">
+            
+            </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="telephone">Restaurant telephone</label>  
+            <div class="col-md-12">
+            <input id="telephone" name="telephone" type="text" [(ngModel)]="restaurant.telephone"
+            placeholder="Restaurant telephone" class="form-control input-md" required="">
+            
+            </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="description">Restaurant description</label>  
+            <div class="col-md-12">
+            <input id="description" name="description" type="text" [(ngModel)]="restaurant.description"
+            placeholder="Restaurant description" class="form-control input-md" required="">
+            
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="link">Restaurant link</label>  
+            <div class="col-md-12">
+            <input id="link" name="link" type="text" [(ngModel)]="restaurant.link"
+            placeholder="Restaurant link" class="form-control input-md" required="">
+            
+            </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-12 control-label" for="category">Restaurant category</label>  
+            <div class="col-md-12">
+            <input id="category" name="category" type="text" [(ngModel)]="restaurant.category"
+            placeholder="Restaurant category" class="form-control input-md" required="">
+            
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="button1id"></label>
+            <div class="col-md-8">
+            <button id="save" name="save" class="btn btn-success">Save</button>
+            <a id="cancel" name="cancel" class="btn btn-danger" [routerLink]="['/restaurant/list']" routerLinkActive="router-link-active" >Cancel</a>
+            </div>
+        </div>
+        </fieldset>
+
+    </form>
+</div>
